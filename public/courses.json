@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "40 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Master HTML, CSS, JavaScript, and React to build stunning full-stack websites from scratch.",
+    "image": "https://i.ibb.co/LzNfM7P/web-dev.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Advanced Next.js Mastery",
+    "instructor": "Sarah Smith",
+    "duration": "15 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Learn Server Components, Dynamic Routing, and Server Actions in the latest Next.js framework.",
+    "image": "https://i.ibb.co/pP6mXvH/nextjs.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Emily Chen",
+    "duration": "25 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Design user-friendly interfaces using Figma and learn the core principles of user experience.",
+    "image": "https://i.ibb.co/yN6Vp3S/uiux.jpg",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing Strategy 2026",
+    "instructor": "Michael Brown",
+    "duration": "30 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Master SEO, Social Media Marketing, and Google Ads to grow any business online.",
+    "image": "https://i.ibb.co/mS5S8Vz/marketing.jpg",
+    "category": "Marketing"
+  },
+  {
+    "id": 5,
+    "title": "Python for Data Science",
+    "instructor": "Dr. Alan Turing",
+    "duration": "50 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Analyze large datasets and build machine learning models using Python and Pandas.",
+    "image": "https://i.ibb.co/vX9Y6pQ/datascience.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 6,
+    "title": "Graphic Design Masterclass",
+    "instructor": "Jessica Lee",
+    "duration": "22 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn Adobe Photoshop, Illustrator, and InDesign to create professional visual content.",
+    "image": "https://i.ibb.co/VJHvN2C/graphic.jpg",
+    "category": "Design"
+  },
+  {
+    "id": 7,
+    "title": "JavaScript Algorithms & Logic",
+    "instructor": "Mark Zuckerberg",
+    "duration": "18 hours",
+    "rating": 4.8,
+    "level": "Advanced",
+    "description": "Deep dive into data structures and algorithms to crack your next technical interview.",
+    "image": "https://i.ibb.co/G3Xm8D1/js-logic.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 8,
+    "title": "Content Writing & Copywriting",
+    "instructor": "David Ogilvy",
+    "duration": "12 hours",
+    "rating": 4.4,
+    "level": "Beginner",
+    "description": "Write persuasive copy that converts visitors into customers and master the art of storytelling.",
+    "image": "https://i.ibb.co/r7C8f9z/writing.jpg",
+    "category": "Marketing"
+  },
+  {
+    "id": 9,
+    "title": "Mobile App Dev with React Native",
+    "instructor": "Chris Evans",
+    "duration": "35 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Build cross-platform Android and iOS apps using your existing React knowledge.",
+    "image": "https://i.ibb.co/S6vKxM1/mobile.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 10,
+    "title": "Cyber Security Essentials",
+    "instructor": "Kevin Mitnick",
+    "duration": "28 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Protect systems and networks from digital attacks and learn the basics of ethical hacking.",
+    "image": "https://i.ibb.co/kM7F6Xm/cyber.jpg",
+    "category": "Development"
+  }
+]
