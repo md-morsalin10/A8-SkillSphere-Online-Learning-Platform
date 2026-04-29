@@ -14,7 +14,7 @@ const PopularCourses =async () => {
     return (
         <div>
             <h2>Popular Courses</h2>
-            <div>
+            <div className='grid grid-cols-3 gap-3'>
                 {
                     popularCourse.map(data=> <CourseCard key={data.id} data={data}></CourseCard >)
                 }
