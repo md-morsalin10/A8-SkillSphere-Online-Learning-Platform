@@ -2,12 +2,12 @@
   {
     "id": 1,
     "title": "Complete Web Development Bootcamp",
-    "instructor": "John Doe",
+    "instructor": "Jhankar Mahbub",
     "duration": "40 hours",
-    "rating": 4.8,
+    "rating": 4.9,
     "level": "Beginner",
     "description": "Master HTML, CSS, JavaScript, and React to build stunning full-stack websites from scratch.",
-    "image": "https://i.ibb.co/LzNfM7P/web-dev.jpg",
+    "image": "https://i.ibb.co.com/B5NgdyFH/web.jpg",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.9,
     "level": "Advanced",
     "description": "Learn Server Components, Dynamic Routing, and Server Actions in the latest Next.js framework.",
-    "image": "https://i.ibb.co/pP6mXvH/nextjs.jpg",
+    "image": "https://i.ibb.co.com/shZdTvZ/nextjsmaster.jpg",
     "category": "Development"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Design user-friendly interfaces using Figma and learn the core principles of user experience.",
-    "image": "https://i.ibb.co/yN6Vp3S/uiux.jpg",
+    "image": "https://i.ibb.co.com/NnH1pjN9/ui-ux.jpg",
     "category": "Design"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.6,
     "level": "Intermediate",
     "description": "Master SEO, Social Media Marketing, and Google Ads to grow any business online.",
-    "image": "https://i.ibb.co/mS5S8Vz/marketing.jpg",
+    "image": "https://i.ibb.co.com/BVfkQ8YF/digitalmar.jpg",
     "category": "Marketing"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.9,
     "level": "Intermediate",
     "description": "Analyze large datasets and build machine learning models using Python and Pandas.",
-    "image": "https://i.ibb.co/vX9Y6pQ/datascience.jpg",
+    "image": "https://i.ibb.co.com/j9NPDfk3/python.webp",
     "category": "Development"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Learn Adobe Photoshop, Illustrator, and InDesign to create professional visual content.",
-    "image": "https://i.ibb.co/VJHvN2C/graphic.jpg",
+    "image": "https://i.ibb.co.com/hFnkCFSz/graphic.jpg",
     "category": "Design"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.8,
     "level": "Advanced",
     "description": "Deep dive into data structures and algorithms to crack your next technical interview.",
-    "image": "https://i.ibb.co/G3Xm8D1/js-logic.jpg",
+    "image": "https://i.ibb.co.com/nMk5DMqV/js.avif",
     "category": "Development"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.4,
     "level": "Beginner",
     "description": "Write persuasive copy that converts visitors into customers and master the art of storytelling.",
-    "image": "https://i.ibb.co/r7C8f9z/writing.jpg",
+    "image": "https://i.ibb.co.com/nqCkYC46/content.png",
     "category": "Marketing"
   },
   {
@@ -95,7 +95,7 @@
     "rating": 4.7,
     "level": "Intermediate",
     "description": "Build cross-platform Android and iOS apps using your existing React knowledge.",
-    "image": "https://i.ibb.co/S6vKxM1/mobile.jpg",
+    "image": "https://i.ibb.co.com/hFFQppCr/react.webp",
     "category": "Development"
   },
   {
@@ -106,7 +106,7 @@
     "rating": 4.9,
     "level": "Beginner",
     "description": "Protect systems and networks from digital attacks and learn the basics of ethical hacking.",
-    "image": "https://i.ibb.co/kM7F6Xm/cyber.jpg",
+    "image": "https://i.ibb.co.com/KxQ3F0b9/cybar.webp",
     "category": "Development"
   }
 ]
