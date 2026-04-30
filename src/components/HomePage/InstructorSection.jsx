@@ -9,12 +9,17 @@ const InstructorSection =async () => {
     console.log(instructor);
     
     return (
-        <div>
-            <h2 className='text-4xl font-bold text-[#0B1C30] text-center'>Top Instructors</h2>
-            <div className='container mx-auto'>
+        <div className='container mx-auto py-8'>
+            <h2 className='text-4xl font-bold text-[#0B1C30] text-center py-8'>Top Instructors</h2>
+            <div className='container mx-auto grid grid-cols-1 md:grid-cols-4 gap-5'>
                 {
                     instructor.map(ins=> <InstructorCard key={ins.id} ins={ins}></InstructorCard>)
                 }
+            </div>
+
+            <div className='w-2xl mx-auto border  border-gray-100 shadow-2xl mt-10 space-y-2 py-8 flex justify-center items-center flex-col rounded-2xl'>
+                <h2 className='text-[#0B1C30] text-lg'>Ready to transform your career?</h2>
+                <button className='btn btn-primary rounded-3xl py-5'>Join the Community</button>
             </div>
         </div>
     );
