@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "John Doe",
+    "name": "Jhankar Mahbub",
     "role": "Senior Web Developer",
     "specialty": "Full Stack Development",
     "experience": "8+ Years",
-    "image": "https://i.ibb.co/example/john-doe.jpg",
+    "image": "https://i.ibb.co.com/0p4DCddR/jhankar-bhai.webp",
     "bio": "Expert in React, Node.js and cloud architecture with a passion for teaching modern web technologies."
   },
   {
@@ -14,7 +14,7 @@
     "role": "Next.js Specialist",
     "specialty": "Frontend Architecture",
     "experience": "6+ Years",
-    "image": "https://i.ibb.co/example/sarah-smith.jpg",
+    "image": "https://i.ibb.co.com/k2YckjjN/m-3.avif",
     "bio": "Dedicated frontend engineer focusing on performance optimization and scalable React applications."
   },
   {
@@ -23,16 +23,16 @@
     "role": "Marketing Strategist",
     "specialty": "Digital Marketing & SEO",
     "experience": "10+ Years",
-    "image": "https://i.ibb.co/example/michael-brown.jpg",
+    "image": "https://i.ibb.co.com/5hFCqRsv/m-10.webp",
     "bio": "Helping businesses grow through data-driven marketing strategies and search engine optimization."
   },
   {
     "id": 4,
-    "name": "Emily Chen",
+    "name": "Emiliano Clark",
     "role": "Product Designer",
     "specialty": "UI/UX Design",
     "experience": "5+ Years",
-    "image": "https://i.ibb.co/example/emily-chen.jpg",
+    "image": "https://i.ibb.co.com/k2YckjjN/m-3.avif",
     "bio": "Award-winning designer focused on creating intuitive and beautiful user experiences for mobile and web."
   }
 ]

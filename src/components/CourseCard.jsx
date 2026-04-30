@@ -6,7 +6,7 @@ const CourseCard = ({ data }) => {
     return (
         <div className='group '>
             <div className=' flex h-full flex-col border border-gray-200 shadow-2xl space-y-3 rounded-2xl p-5'>
-                <div className='w-full'>
+                <div className='w-full flex justify-center items-center'>
                     <Image
                         src={data.image}
                         width={400}

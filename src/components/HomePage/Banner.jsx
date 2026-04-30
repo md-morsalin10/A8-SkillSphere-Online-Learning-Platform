@@ -18,7 +18,7 @@ const Banner = () => {
             </div>
             <div>
                 <Image 
-                className="w-full"
+                className="w-full rounded-2xl"
                 src={bannerImg} 
                 width={400} 
                 height={400} 
