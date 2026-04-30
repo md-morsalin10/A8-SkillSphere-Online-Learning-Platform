@@ -12,9 +12,15 @@ const PopularCourses =async () => {
    
     
     return (
-        <div>
-            <h2>Popular Courses</h2>
-            <div className='grid grid-cols-3 gap-3'>
+        <div className='container mx-auto p-5'>
+            <div className='flex justify-between space-y-6'>
+                <div >
+                    <h2 className='text-[#0B1C30] text-3xl font-bold'>Popular Courses</h2>
+                    <p className='text-[#464555] text-sm'>Our most enrolled programs this month</p>
+                </div>
+                <button className='text-[#3525CD] text-sm cursor-pointer'>View All Courses</button>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                 {
                     popularCourse.map(data=> <CourseCard key={data.id} data={data}></CourseCard >)
                 }

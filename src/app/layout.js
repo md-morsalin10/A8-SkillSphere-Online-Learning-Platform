@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${lexendFort.className}  h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col container mx-auto">
+      <body className="min-h-full flex flex-col">
         <Navbar/>
         <main>
           {children}
