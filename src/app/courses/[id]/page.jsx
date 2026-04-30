@@ -1,4 +1,7 @@
+import Image from 'next/image';
 import React from 'react';
+import { CiClock1 } from 'react-icons/ci';
+import { FaRegFolderOpen } from 'react-icons/fa';
 
 const CourseDetails = async ({ params }) => {
     const { id } = await params;
@@ -8,15 +11,74 @@ const CourseDetails = async ({ params }) => {
         { cache: 'no-store' });
     const courseData = await resp.json();
 
-    const course = courseData.find(data=> data.id == id);
-    console.log(course,"expected course");
-    
+    const course = courseData.find(data => data.id == id);
+    console.log(course, "expected course");
 
-    const res = fetch
+    const { image, title, instructor, description,category,level,rating,duration, price } = course;
+
 
     return (
-        <div>
+        <div className='flex flex-col lg:flex-row gap-8 lg:gap-16 container mx-auto my-10 px-5 lg:px-0'>
+            <div className='w-full lg:w-1/2 flex justify-center items-center'>
+                <Image
+                    src={image}
+                    width={400}
+                    height={400}
+                    className='w-full h-auto rounded-2xl shadow-md object-contain'
+                    alt={title}
+                />
+            </div>
+            <div className='w-full lg:w-1/2 space-y-6'>
+               
+                <div>
+                    <span className='px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-xs font-semibold uppercase'>
+                        {level}
+                    </span>
+                    <h1 className='text-4xl font-bold text-[#0B1C30] mt-3'>{title}</h1>
+                    <p className='text-gray-500 mt-2 font-medium'>Instructor: <span className='text-indigo-600'>{instructor}</span></p>
+                </div>
 
+               
+                <div className='flex items-center gap-2'>
+                    <span className='text-yellow-500 font-bold text-lg'>{rating}</span>
+                    <div className='flex text-yellow-400'> ★ ★ ★ ★ ★ </div>
+                    <span className='text-gray-400 text-sm'>(2.5k reviews)</span>
+                </div>
+
+             
+                <p className='text-gray-600 leading-7 text-justify border-b pb-6'>
+                    {description}
+                </p>
+
+              
+                <div className='grid grid-cols-2 gap-4'>
+                    <div className='flex items-center gap-3'>
+                        <div className='p-2 bg-gray-100 rounded-lg'><CiClock1 /></div>
+                        <div>
+                            <p className='text-xs text-gray-400 uppercase'>Duration</p>
+                            <p className='font-semibold'>{duration}</p>
+                        </div>
+                    </div>
+                    <div className='flex items-center gap-3'>
+                        <div className='p-2 bg-gray-100 rounded-lg'><FaRegFolderOpen /></div>
+                        <div>
+                            <p className='text-xs text-gray-400 uppercase'>Category</p>
+                            <p className='font-semibold'>{category}</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div className='flex items-center justify-between pt-6'>
+                    <div>
+                        <p className='text-sm text-gray-400'>Course Price</p>
+                        <p className='text-3xl font-bold text-[#0B1C30]'>${price}</p>
+                    </div>
+                    <button className='bg-[#3525CD] text-white px-10 py-4 rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200'>
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };
