@@ -1,5 +1,6 @@
 import React, { cache } from 'react';
 import CourseCard from '../CourseCard';
+import Link from 'next/link';
 
 const PopularCourses =async () => {
     const res = await fetch("https://a8-skill-sphere-online-learning-pla.vercel.app/courses.json",
@@ -10,8 +11,6 @@ const PopularCourses =async () => {
     console.log(popularCourse);
     
     
-   
-    
     return (
         <div className='container mx-auto p-5'>
             <div className='flex justify-between space-y-6'>
@@ -19,7 +18,7 @@ const PopularCourses =async () => {
                     <h2 className='text-[#0B1C30] text-3xl font-bold'>Popular Courses</h2>
                     <p className='text-[#464555] text-sm'>Our most enrolled programs this month</p>
                 </div>
-                <button className='text-[#3525CD] text-sm cursor-pointer'>View All Courses</button>
+                <Link href={'/courses'}><button className='text-[#3525CD] text-sm cursor-pointer'>View All Courses</button></Link>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                 {

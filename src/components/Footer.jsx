@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaMedal } from 'react-icons/fa';
-import { IoMdTrophy } from 'react-icons/io';
+
 
 const Footer = () => {
     return (
