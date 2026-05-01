@@ -37,19 +37,20 @@ const RegisterPage = () => {
 
     return (
         <div className="flex gap-10 justify-center items-center container mx-auto my-10">
-            <div>
+            <div className="hidden lg:block lg:w-1/2">
                 <SideContent/>
             </div>
-            <div className="flex flex-col justify-center h-[70vh] items-center py-10 ">
-                <Form className="flex w-full flex-col gap-4 border border-gray-200 space-y-2 p-5 rounded-2xl shadow-2xl" onSubmit={onSubmit}>
+            <div className="flex  flex-col justify-center h-[70vh] items-center py-10 ">
+                <Form className="flex w-full justify-center  flex-col gap-4 border border-gray-200 space-y-2 p-5 rounded-2xl shadow-2xl" onSubmit={onSubmit}>
                     <TextField
                         isRequired
                         name="name"
                         type="text"
+                      
 
                     >
                         <Label>Name</Label>
-                        <Input name="name" placeholder="Enter Your Name" />
+                        <Input className={'w-full'} name="name" placeholder="Enter Your Name" />
                         <FieldError />
                     </TextField>
                     <TextField
@@ -59,7 +60,10 @@ const RegisterPage = () => {
 
                     >
                         <Label>Photo URL</Label>
-                        <Input name="url" placeholder="Enter Photo URL" />
+                        <Input 
+                        className={'w-full'}
+                        name="url"
+                         placeholder="Enter Photo URL" />
                         <FieldError />
                     </TextField>
 
@@ -75,7 +79,10 @@ const RegisterPage = () => {
                         }}
                     >
                         <Label>Email</Label>
-                        <Input name="email" placeholder="Enter Email Address" />
+                        <Input 
+                        className={'w-full'}
+                        name="email" 
+                        placeholder="Enter Email Address" />
                         <FieldError />
                     </TextField>
                     <TextField
@@ -97,7 +104,10 @@ const RegisterPage = () => {
                         }}
                     >
                         <Label>Password</Label>
-                        <Input name="password" placeholder="Enter your password" />
+                        <Input
+                        className={'w-full'} 
+                        name="password" 
+                        placeholder="Enter your password" />
                         <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
                     </TextField>

@@ -34,11 +34,11 @@ const LoginPage = () => {
 
     return (
         <div className="flex gap-10 justify-center items-center container mx-auto my-10">
-            <div>
+            <div className="hidden lg:block lg:w-1/2">
                 <SideContent />
             </div>
 
-            <div className="flex flex-col justify-center border border-gray-200 rounded-2xl shadow-2xl p-5 h-full space-y-4 items-center">
+            <div className="w-full max-w-md lg:w-1/2  flex flex-col justify-center border border-gray-200 rounded-2xl shadow-2xl p-8 lg:p-5 h-full space-y-4 items-center">
                 <div className="text-center space-y-2 pb-6">
                     <h2 className="text-3xl font-semibold text-[#0B1C30]">Welcome back</h2>
                     <p className="text-sm text-[#464555]">Enter your details to access your dashboard.</p>
