@@ -1,12 +1,35 @@
+"use client"
+import { authClient } from '@/lib/auth-client';
+import { Avatar } from '@heroui/react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const Navbar = () => {
+    const userData = authClient.useSession();
+    const user = userData.data?.user
+    // console.log(user, "user data  ");
+
+    const pathName = usePathname();
+
     const links = <>
-        <li><Link href={'/'}>Home</Link></li>
-        <li><Link href={'/courses'}>Courses</Link></li>
-        <li><Link href={'/profile'}>Profile</Link></li>
+        <li
+            className={`${pathName === '/' ?
+                "font-bold text-indigo-700 border-b-4 border-indigo-700" : ''}mx-2`}><Link href={'/'}>Home</Link></li>
+        <li
+            className={`${pathName === '/courses' ?
+                "font-bold text-indigo-700 border-b-4 border-indigo-700" : ''}mx-2`}
+        ><Link href={'/courses'}>Courses</Link></li>
+        <li
+            className={`${pathName === '/profile' ?
+                "font-bold text-indigo-700 border-b-4 border-indigo-700" : ''}`}
+        ><Link href={'/profile'}>Profile</Link></li>
     </>
+
+    const handleSignOut=async()=>{
+        await authClient.signOut()
+    }
+    
     return (
         <div className='bg-base-100 shadow-sm'>
             <div className="navbar container mx-auto">
@@ -25,13 +48,36 @@ const Navbar = () => {
                     <h2 className='text-[#4F46E5] text-2xl font-bold'>SkillSphere</h2>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 text-[#475569]">
+                    <ul className="menu menu-horizontal px-4 text-[#475569]">
                         {links}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link href={'/login'}><button className='btn mx-2 btn-primary'>Login</button></Link>
-                    <Link href={'/register'}><button className='btn'>Register</button></Link>
+                    {!user &&
+                        <ul>
+                            <Link href={'/login'}><button className='btn mx-2 btn-primary'>Login</button></Link>
+                            <Link href={'/register'}><button className='btn btn-primary btn-outline'>Register</button></Link>
+                        </ul>}
+
+                    {
+                        user &&
+                        <div className='flex items-center gap-1.5'>
+                            <div className='border-3 border-indigo-700 rounded-full'>
+                                <Avatar>
+                                    <Avatar.Image
+                                        alt={user?.name}
+                                        src={user?.image}
+                                        referrerPolicy='no-referrer'
+                                        />
+                                        
+                                    <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+                                </Avatar>
+                            </div>
+                            <button 
+                            onClick={handleSignOut}
+                            className='btn btn-primary text-white'>Logout</button>  
+                        </div>
+                    }
                 </div>
             </div>
         </div>

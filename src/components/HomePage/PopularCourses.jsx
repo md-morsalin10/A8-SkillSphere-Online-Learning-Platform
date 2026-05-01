@@ -18,7 +18,8 @@ const PopularCourses =async () => {
                     <h2 className='text-[#0B1C30] text-3xl font-bold'>Popular Courses</h2>
                     <p className='text-[#464555] text-sm'>Our most enrolled programs this month</p>
                 </div>
-                <Link href={'/courses'}><button className='text-[#3525CD] text-sm cursor-pointer'>View All Courses</button></Link>
+                <Link href={'/courses'}>
+                <button className='text-[#3525CD] text-sm cursor-pointer btn btn-outline'>View All Courses</button></Link>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                 {
