@@ -1,17 +1,49 @@
 "use client";
+import SideContent from "@/components/SideContent/SideContent";
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import Link from "next/link";
+import { FaGoogle } from "react-icons/fa";
+
 
 const LoginPage = () => {
-   
-        const onSubmit = (e)=> {
-            e.preventDefault();
-          
-        };
-        
-        return (
-            <div className="flex flex-col justify-center items-center py-10">
-                <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const data = Object.fromEntries(formData.entries());
+
+        const { email, password } = data;
+
+        console.log("Login Data:", email, password);
+
+        const { data: res, error } = await authClient.signIn.email({
+            email,
+            password,
+            callbackURL: "/"
+        });
+        // console.log(res, error, "from login");
+    };
+
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    }
+
+    return (
+        <div className="flex gap-10 justify-center items-center container mx-auto my-10">
+            <div>
+                <SideContent />
+            </div>
+
+            <div className="flex flex-col justify-center border border-gray-200 rounded-2xl shadow-2xl p-5 h-full space-y-4 items-center">
+                <div className="text-center space-y-2 pb-6">
+                    <h2 className="text-3xl font-semibold text-[#0B1C30]">Welcome back</h2>
+                    <p className="text-sm text-[#464555]">Enter your details to access your dashboard.</p>
+                </div>
+                <Form className="flex  flex-col gap-4 space-y-2" onSubmit={onSubmit}>
                     <TextField
                         isRequired
                         name="email"
@@ -24,7 +56,7 @@ const LoginPage = () => {
                         }}
                     >
                         <Label>Email</Label>
-                        <Input placeholder="john@example.com" />
+                        <Input placeholder="Enter Your Email Address" />
                         <FieldError />
                     </TextField>
                     <TextField
@@ -50,18 +82,46 @@ const LoginPage = () => {
                         <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
                     </TextField>
-                    <div className="flex gap-2">
-                        <Button type="submit">
+                    <div className="flex justify-center items-center gap-2">
+                        <Button className={'w-full bg-indigo-600'} type="submit">
                             <Check />
                             Submit
                         </Button>
-                        <Button type="reset" variant="secondary">
+                        {/* <Button type="reset" variant="secondary">
                             Reset
-                        </Button>
+                        </Button> */}
                     </div>
-                </Form>
-            </div>
-        );
-    };
 
-    export default LoginPage;
+                    <div className="flex items-center my-2">
+                        <div className="grow border-t border-gray-300"></div>
+                        <span className="mx-4 text-gray-500 text-sm font-medium uppercase">
+                            Or continue with
+                        </span>
+                        <div className="grow border-t border-gray-300"></div>
+                    </div>
+
+                </Form>
+                <div>
+
+
+                    <div>
+                        <button
+                            onClick={handleGoogleSignIn}
+                            className="btn w-full btn-outline btn-primary"
+                        ><FaGoogle /> SignIn Google</button>
+                    </div>
+
+                    <div className="pt-5">
+                        <p className="text-sm text-[#464555]">Don't have an account? <Link href={'/register'}>
+                            <span className="font-bold text-indigo-600 cursor-pointer">Register</span>
+                        </Link></p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    );
+}
+
+export default LoginPage;
