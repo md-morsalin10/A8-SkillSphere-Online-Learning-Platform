@@ -16,7 +16,7 @@ const RegisterPage = () => {
 
         const { data: res, error } = await authClient.signUp.email({
             name, // user email address
-            image, // user password -> min 8 characters by default
+            url, // user password -> min 8 characters by default
             email, // user display name
             password, // User image URL (optional)
             callbackURL: "/" // A URL to redirect to after the user verifies their email (optional)
@@ -54,12 +54,12 @@ const RegisterPage = () => {
                     </TextField>
                     <TextField
                         isRequired
-                        name="image"
+                        name="url"
                         type="text"
 
                     >
                         <Label>Photo URL</Label>
-                        <Input name="image" placeholder="Enter Photo URL" />
+                        <Input name="url" placeholder="Enter Photo URL" />
                         <FieldError />
                     </TextField>
 
