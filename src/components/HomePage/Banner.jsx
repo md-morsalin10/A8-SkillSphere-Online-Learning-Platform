@@ -3,6 +3,9 @@ import bannerImg from "@/assets/banner2.jpg"
 import Image from "next/image";
 import { easeInOut, motion } from "motion/react"
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
+import { CiPlay1 } from "react-icons/ci";
+import { MdOutlineNotStarted } from "react-icons/md";
 
 const Banner = () => {
     return (
@@ -40,11 +43,11 @@ const Banner = () => {
                     transition={{ ease: easeInOut, delay: 0.5, duration: 0.4 }}
                 >
                     <Link href={'/courses'}>
-                        <button className='btn btn-primary mr-5'>Explore Courses</button>
+                        <button className='btn btn-primary mr-5'>Explore Courses <FaArrowRight /></button>
                     </Link>
 
                     <Link href={"/register"}>
-                        <button className='btn btn-primary btn-outline'>Get Started</button>
+                        <button className='btn btn-primary btn-outline'><MdOutlineNotStarted />Get Started</button>
                     </Link>
                 </motion.div>
             </div>

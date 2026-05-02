@@ -4,6 +4,7 @@ import { Avatar } from '@heroui/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import { MdOutlineLogout } from 'react-icons/md';
 
 const Navbar = () => {
     const userData = authClient.useSession();
@@ -75,7 +76,7 @@ const Navbar = () => {
                             </div>
                             <button 
                             onClick={handleSignOut}
-                            className='btn btn-primary text-white'>Logout</button>  
+                            className='btn btn-primary text-white'><MdOutlineLogout />Logout</button>  
                         </div>
                     }
                 </div>

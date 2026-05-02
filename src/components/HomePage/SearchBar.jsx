@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { IoSearchSharp } from "react-icons/io5";
 
 const SearchBar = ({ defaultValue }) => {
     const [searchTerm, setSearchTerm] = useState(defaultValue);
@@ -27,9 +28,9 @@ const SearchBar = ({ defaultValue }) => {
             />
             <button 
                 type="submit" 
-                className="absolute right-2 px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors"
+                className="absolute right-2 px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors flex items-center gap-1"
             >
-                Search
+                <IoSearchSharp />Search
             </button>
         </form>
     );

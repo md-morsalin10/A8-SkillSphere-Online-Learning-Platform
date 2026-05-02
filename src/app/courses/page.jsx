@@ -2,6 +2,9 @@ import CourseCard from '@/components/CourseCard';
 import SearchBar from '@/components/HomePage/SearchBar';
 import FadeIn from '@/components/MotionWrapper/FadeIn';
 import React from 'react';
+import image from "@/assets/CourseNotFound.jpg"
+import Image from 'next/image';
+
 
 const CoursePage = async ({ searchParams }) => {
 
@@ -34,6 +37,15 @@ const CoursePage = async ({ searchParams }) => {
                     </div>
                 ) : (
                     <div className='text-center py-20'>
+
+                        <div className='flex justify-center items-center'>
+                            <Image
+                            src={image}
+                            width={400}
+                            height={400}
+                            alt='not Found'
+                            />
+                        </div>
                         <p className='text-xl text-gray-500'>No courses found for {query}</p>
                     </div>
                 )
