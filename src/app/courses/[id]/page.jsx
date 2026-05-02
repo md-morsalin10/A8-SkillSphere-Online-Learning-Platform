@@ -7,7 +7,7 @@ const CourseDetails = async ({ params }) => {
     const { id } = await params;
     // console.log(id, "params");
 
-    const resp = await fetch("https://a8-skill-sphere-online-learning-pla.vercel.app/courses.json",
+    const resp = await fetch("https://a8-skill-sphere-online-learning-pla.vercel.app/db.json",
         { cache: 'no-store' });
     const courseData = await resp.json();
 
