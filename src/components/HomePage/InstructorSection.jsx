@@ -11,7 +11,7 @@ const InstructorSection =async () => {
     return (
         <div className='container mx-auto p-2 py-8'>
             <h2 className='text-4xl font-bold text-[#0B1C30] text-center py-8'>Top Instructors</h2>
-            <div className='container mx-auto grid grid-cols-1 md:grid-cols-4 p-4 gap-5'>
+            <div className='container mx-auto grid grid-cols-1 md:grid-cols-4 p-10 gap-5'>
                 {
                     instructor.map(ins=> <InstructorCard key={ins.id} ins={ins}></InstructorCard>)
                 }

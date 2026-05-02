@@ -3,6 +3,7 @@ import SideContent from "@/components/SideContent/SideContent";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
@@ -16,14 +17,14 @@ const RegisterPage = () => {
         const { name, url, email, password } = data;
 
         const { data: res, error } = await authClient.signUp.email({
-            name, // user email address
-            url, // user password -> min 8 characters by default
-            email, // user display name
-            password, // User image URL (optional)
-            callbackURL: "/" // A URL to redirect to after the user verifies their email (optional)
+            name, 
+            url, 
+            email, 
+            password,
+            callbackURL: "/" 
         }, {
             onRequest: (ctx) => {
-                //show loading
+                <span className="loading loading-bars loading-xs"></span>
             },
             onSuccess: (ctx) => {
                 router.push("/")
@@ -40,15 +41,20 @@ const RegisterPage = () => {
     return (
         <div className="flex gap-10 justify-center items-center container mx-auto my-10">
             <div className="hidden lg:block lg:w-1/2">
-                <SideContent/>
+                <SideContent />
             </div>
-            <div className="flex  flex-col justify-center h-[70vh] items-center py-10 ">
-                <Form className="flex w-full justify-center  flex-col gap-4 border border-gray-200 space-y-2 p-5 rounded-2xl shadow-2xl" onSubmit={onSubmit}>
+            <div className="flex  flex-col justify-center  items-center py-6  border border-gray-200 rounded-2xl shadow-2xl">
+                <div className="text-center space-y-2 pb-6">
+                    <h2 className="text-3xl font-semibold text-[#0B1C30]">Create an Account</h2>
+                    <p className="text-sm text-[#464555]">Sign up now to explore all our features.</p>
+                </div>
+
+                <Form className="flex w-full justify-center  flex-col gap-4 space-y-2 p-5 " onSubmit={onSubmit}>
                     <TextField
                         isRequired
                         name="name"
                         type="text"
-                      
+
 
                     >
                         <Label>Name</Label>
@@ -62,10 +68,10 @@ const RegisterPage = () => {
 
                     >
                         <Label>Photo URL</Label>
-                        <Input 
-                        className={'w-full'}
-                        name="url"
-                         placeholder="Enter Photo URL" />
+                        <Input
+                            className={'w-full'}
+                            name="url"
+                            placeholder="Enter Photo URL" />
                         <FieldError />
                     </TextField>
 
@@ -81,10 +87,10 @@ const RegisterPage = () => {
                         }}
                     >
                         <Label>Email</Label>
-                        <Input 
-                        className={'w-full'}
-                        name="email" 
-                        placeholder="Enter Email Address" />
+                        <Input
+                            className={'w-full'}
+                            name="email"
+                            placeholder="Enter Email Address" />
                         <FieldError />
                     </TextField>
                     <TextField
@@ -107,9 +113,9 @@ const RegisterPage = () => {
                     >
                         <Label>Password</Label>
                         <Input
-                        className={'w-full'} 
-                        name="password" 
-                        placeholder="Enter your password" />
+                            className={'w-full'}
+                            name="password"
+                            placeholder="Enter your password" />
                         <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
                     </TextField>
@@ -123,6 +129,14 @@ const RegisterPage = () => {
                         </Button>
                     </div>
                 </Form>
+
+                <div>
+                    <div className="pt-5">
+                        <p className="text-sm text-[#464555]">Already have an account? <Link href={'/login'}>
+                            <span className="font-bold text-indigo-600 cursor-pointer">Login</span>
+                        </Link></p>
+                    </div>
+                </div>
             </div>
         </div>
     );
