@@ -17,7 +17,7 @@ const LoginPage = () => {
 
         const { email, password } = data;
 
-        console.log("Login Data:", email, password);
+        // console.log("Login Data:", email, password);
 
         const { data: res, error } = await authClient.signIn.email({
             email,
@@ -40,7 +40,7 @@ const LoginPage = () => {
     }
 
     return (
-        <div className="flex gap-10 justify-center items-center container mx-auto my-10">
+        <div className="flex gap-10 justify-center items-center p-3 lg:p-1 container mx-auto my-10">
             <div className="hidden lg:block lg:w-1/2">
                 <SideContent />
             </div>
@@ -99,9 +99,6 @@ const LoginPage = () => {
                             <Check />
                             Submit
                         </Button>
-                        {/* <Button type="reset" variant="secondary">
-                            Reset
-                        </Button> */}
                     </div>
 
                     <div className="flex items-center my-2">

@@ -6,13 +6,13 @@ import { IoMdStar } from 'react-icons/io';
 const CourseCard = ({ data }) => {
     const { category } = data
     return (
-        <div className='group p-4 lg:p-0'>
+        <div className='group p-4 lg:p-0 transition-all duration-300 hover:-translate-y-2'>
             <div className=' flex h-full flex-col relative border border-gray-200 shadow-2xl space-y-3 rounded-2xl p-4'>
                 <div className='w-full relative aspect-video flex justify-center items-center'>
                     <Image
                         src={data.image}
                        fill
-                        className='w-full h-full object-cover rounded-2xl'
+                        className='w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-102'
                         alt={data.title}
                     ></Image>
                 </div>

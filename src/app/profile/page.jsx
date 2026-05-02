@@ -23,7 +23,6 @@ const ProfilePage = () => {
             name: name,
             image: url,
 
-
         })
         if (error) {
             console.error("Update failed:", error);
@@ -138,7 +137,9 @@ const ProfilePage = () => {
                         </p>
                     </div>
                     <div className='flex flex-col gap-3 sm:flex-row justify-between mt-5 items-center'>
-                        <button className='btn btn-primary btn-outline w-full sm:w-auto'>Cancel Change</button>
+                        <button
+                         type='reset'
+                         className='btn btn-primary btn-outline w-full sm:w-auto'>Reset</button>
                         <button
                             type='submit'
                             className='btn btn-primary w-full sm:w-auto'>Update Information</button>

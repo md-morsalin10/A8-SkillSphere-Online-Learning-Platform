@@ -61,7 +61,7 @@ const Banner = () => {
 
                 className="w-full lg:w-1/2 order-1 lg:order-2 p-3 lg:p-0 rounded-2xl shadow-2xl">
                 <Image
-                    className="w-full h-auto rounded-2xl shadow-2xl object-cover hover:scale-105 transition-transform duration-700"
+                    className="w-full h-auto rounded-2xl shadow lg:shadow-2xl object-cover hover:scale-105 transition-transform duration-700"
                     src={bannerImg}
                     width={800}
                     height={600}

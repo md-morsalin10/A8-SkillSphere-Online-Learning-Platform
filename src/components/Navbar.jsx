@@ -45,7 +45,7 @@ const Navbar = () => {
 
                         </ul>
                     </div>
-                    <h2 className='text-[#4F46E5] text-2xl font-bold'>SkillSphere</h2>
+                    <h2 className='text-[#4F46E5] text-xl lg:text-2xl font-bold'>SkillSphere</h2>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-2 text-[#475569]">

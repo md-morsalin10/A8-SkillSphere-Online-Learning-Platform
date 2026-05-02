@@ -12,7 +12,7 @@ const CourseDetails = async ({ params }) => {
     const courseData = await resp.json();
 
     const course = courseData.find(data => data.id == id);
-    console.log(course, "expected course");
+    // console.log(course, "expected course");
 
     const { image, title, instructor, description,category,level,rating,duration, price } = course;
 

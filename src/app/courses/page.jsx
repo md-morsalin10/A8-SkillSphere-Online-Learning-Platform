@@ -25,7 +25,7 @@ const CoursePage = async ({ searchParams }) => {
             </FadeIn>
             {
                 filteredCourses.length > 0 ? (
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-5 lg:gap-6 mb-10'>
                         {filteredCourses.map((data, index) => (
                             <FadeIn key={data.id} delay={index * 0.1}>
                                 <CourseCard data={data} />
