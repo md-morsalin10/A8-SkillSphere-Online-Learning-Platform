@@ -19,7 +19,7 @@ const SideContent = () => {
                     <p className="text-[#464555] font-medium text-sm">Learn from industry leaders and
                         academic pioneers.</p>
                 </div>
-                <div className="w-65 border border-gray-200 rounded-2xl space-y-1 p-4">
+                <div className="w-65 border border-gray-200 rounded-2xl space-y-1  p-4">
                     <RiVerifiedBadgeFill size={30} className="text-green-600" />
                     <h2 className="text-[#0B1C30] font-medium text-sm">Certifications</h2>
                     <p className="text-[#464555] font-medium text-sm">Earn recognized credentials for your

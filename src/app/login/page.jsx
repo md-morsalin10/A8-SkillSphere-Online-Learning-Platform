@@ -56,7 +56,7 @@ const LoginPage = () => {
                         }}
                     >
                         <Label>Email</Label>
-                        <Input placeholder="Enter Your Email Address" />
+                        <Input className={'w-full'} placeholder="Enter Your Email Address" />
                         <FieldError />
                     </TextField>
                     <TextField
@@ -78,7 +78,7 @@ const LoginPage = () => {
                         }}
                     >
                         <Label>Password</Label>
-                        <Input placeholder="Enter your password" />
+                        <Input className={'w-full'} placeholder="Enter your password" />
                         <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
                     </TextField>
