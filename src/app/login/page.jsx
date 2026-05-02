@@ -5,6 +5,7 @@ import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 const LoginPage = () => {
@@ -24,6 +25,12 @@ const LoginPage = () => {
             callbackURL: "/"
         });
         // console.log(res, error, "from login");
+        if (error) {
+            toast.error(error.message || "Invalid credentials!");
+            return;
+        }
+
+        toast.success("Login successful! Redirecting...");
     };
 
     const handleGoogleSignIn = async () => {

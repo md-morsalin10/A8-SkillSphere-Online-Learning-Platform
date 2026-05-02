@@ -4,6 +4,7 @@ import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
     const router = useRouter()
@@ -12,7 +13,7 @@ const RegisterPage = () => {
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData.entries());
 
-        const { name, image, email, password } = data;
+        const { name, url, email, password } = data;
 
         const { data: res, error } = await authClient.signUp.email({
             name, // user email address
@@ -26,10 +27,11 @@ const RegisterPage = () => {
             },
             onSuccess: (ctx) => {
                 router.push("/")
+                toast.success("Register Successful");
             },
             onError: (ctx) => {
                 // display the error message
-                alert(ctx.error.message);
+                toast.error(ctx.error.message);
             },
         });
         console.log(res, error);
