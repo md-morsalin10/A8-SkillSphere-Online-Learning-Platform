@@ -3,6 +3,8 @@ import CourseCard from '../CourseCard';
 import Link from 'next/link';
 import FadeIn from '../MotionWrapper/FadeIn';
 
+import { FaArrowRight } from 'react-icons/fa';
+
 
 const PopularCourses = async () => {
     const res = await fetch("https://a8-skill-sphere-online-learning-pla.vercel.app/courses.json",
@@ -27,7 +29,7 @@ const PopularCourses = async () => {
                 </div>
                 <FadeIn delay={0.3}>
                     <Link href={'/courses'}>
-                        <button className='text-[#3525CD] text-sm cursor-pointer btn btn-outline'>View All Courses</button>
+                        <button className='text-[#3525CD] text-sm cursor-pointer btn btn-outline'>View All Courses <FaArrowRight /></button>
                     </Link>
                 </FadeIn>
             </div>
