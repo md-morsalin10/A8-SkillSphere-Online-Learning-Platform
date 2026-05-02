@@ -15,8 +15,8 @@ const lexendFort = Lexend({
 
 
 export const metadata = {
-  title: "Skill Sphere",
-  description: "Online Learning Platform",
+  title: "Skill Sphere | Online Learning Platform",
+  description: "Learn web development and design from expert-led courses.",
 };
 
 export default function RootLayout({ children }) {
