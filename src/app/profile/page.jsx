@@ -6,6 +6,7 @@ import { FaGraduationCap } from 'react-icons/fa';
 import { FaPencil } from 'react-icons/fa6';
 import { RiVerifiedBadgeFill } from 'react-icons/ri';
 import { easeInOut, motion } from "motion/react"
+import { toast } from 'react-toastify';
 
 const ProfilePage = () => {
     const userData = authClient.useSession();
@@ -26,9 +27,10 @@ const ProfilePage = () => {
         })
         if (error) {
             console.error("Update failed:", error);
-            alert("Something went wrong!");
+            toast.error("Something went wrong!");
             return;
         }
+        toast.success("Profile Update Successfully");
 
     }
 
@@ -46,7 +48,7 @@ const ProfilePage = () => {
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                        
+
                         className='flex justify-center items-center '>
                         <Avatar className='h-35 w-35 mt-5 border-4 border-indigo-700 shadow-2xl p-2'>
                             <Avatar.Image
