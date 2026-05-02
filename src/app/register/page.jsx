@@ -19,20 +19,17 @@ const RegisterPage = () => {
 
         const { data: res, error } = await authClient.signUp.email({
             name,
-            url,
             email,
             password,
+            url,
             callbackURL: "/"
         }, {
-            onRequest: (ctx) => {
-                <span className="loading loading-bars loading-xs"></span>
-            },
             onSuccess: (ctx) => {
-                router.push("/")
+               router.back();
                 toast.success("Register Successful");
             },
             onError: (ctx) => {
-                // display the error message
+              
                 toast.error(ctx.error.message);
             },
         });

@@ -1,23 +1,27 @@
-import { NextResponse } from 'next/server'
-import { auth } from './lib/auth'
-import { headers } from 'next/headers'
-
+import { NextResponse } from "next/server";
+import { auth } from "./lib/auth";
+import { headers } from "next/headers";
 
 export async function proxy(request) {
-
     const session = await auth.api.getSession({
-        headers: await headers() 
-    })
+        headers: await headers(),
+    });
 
-    if(!session){
-           return NextResponse.redirect(new URL('/login', request.url))
+    if (session) {
+        return NextResponse.next();
     }
 
-   
+    const loginUrl = new URL("/login", request.url);
+
+    loginUrl.searchParams.set(
+        "redirect",
+        request.nextUrl.pathname + request.nextUrl.search
+    );
+
+    return NextResponse.redirect(loginUrl);
 }
-
-
 
 export const config = {
-    matcher: ["/profile","/courses/:path"],
-}
+    matcher: ["/profile", "/courses/:path*"],
+};
+
