@@ -17,14 +17,16 @@ const CoursePage = async ({ searchParams }) => {
 
     return (
         <div className='container mx-auto'>
-            <h2 className='text-2xl font-bold text-center py-8'>All Courses</h2>
-            <div className='max-w-md mx-auto mb-10'>
-                <SearchBar defaultValue={query} />
-            </div>
+            <FadeIn delay={0.2}>
+                <h2 className='text-2xl font-bold text-center py-8'>All Courses</h2>
+                <div className='max-w-md mx-auto p-4 mb-10'>
+                    <SearchBar defaultValue={query} />
+                </div>
+            </FadeIn>
             {
                 filteredCourses.length > 0 ? (
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10'>
-                        {filteredCourses.map((data,index) => (
+                        {filteredCourses.map((data, index) => (
                             <FadeIn key={data.id} delay={index * 0.1}>
                                 <CourseCard data={data} />
                             </FadeIn>

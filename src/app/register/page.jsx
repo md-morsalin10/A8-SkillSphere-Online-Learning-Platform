@@ -6,6 +6,7 @@ import { Button, Description, FieldError, Form, Input, Label, TextField } from "
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { easeInOut, motion } from "motion/react"
 
 const RegisterPage = () => {
     const router = useRouter()
@@ -17,11 +18,11 @@ const RegisterPage = () => {
         const { name, url, email, password } = data;
 
         const { data: res, error } = await authClient.signUp.email({
-            name, 
-            url, 
-            email, 
+            name,
+            url,
+            email,
             password,
-            callbackURL: "/" 
+            callbackURL: "/"
         }, {
             onRequest: (ctx) => {
                 <span className="loading loading-bars loading-xs"></span>
@@ -43,7 +44,12 @@ const RegisterPage = () => {
             <div className="hidden lg:block lg:w-1/2">
                 <SideContent />
             </div>
-            <div className="flex  flex-col justify-center  items-center py-6  border border-gray-200 rounded-2xl shadow-2xl">
+            <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                
+                className="flex  flex-col justify-center  items-center py-6  border border-gray-200 rounded-2xl shadow-2xl">
                 <div className="text-center space-y-2 pb-6">
                     <h2 className="text-3xl font-semibold text-[#0B1C30]">Create an Account</h2>
                     <p className="text-sm text-[#464555]">Sign up now to explore all our features.</p>
@@ -137,7 +143,7 @@ const RegisterPage = () => {
                         </Link></p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };

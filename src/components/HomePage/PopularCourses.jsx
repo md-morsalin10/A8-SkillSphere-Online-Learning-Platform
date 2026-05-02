@@ -19,10 +19,10 @@ const PopularCourses = async () => {
             <div className='flex justify-between space-y-6'>
                 <div >
                     <FadeIn delay={0.3}>
-                        <h2 className='text-[#0B1C30] text-3xl font-bold'>Popular Courses</h2>
+                        <h2 className='text-[#0B1C30] text-xl lg:text-3xl font-bold'>Popular Courses</h2>
                     </FadeIn>
                     <FadeIn delay={0.3}>
-                        <p className='text-[#464555] text-sm'>Our most enrolled programs this month</p>
+                        <p className='text-[#464555] text-xs lg:text-sm'>Our most enrolled programs this month</p>
                     </FadeIn>
                 </div>
                 <FadeIn delay={0.3}>

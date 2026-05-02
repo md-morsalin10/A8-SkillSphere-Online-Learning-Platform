@@ -5,6 +5,7 @@ import React from 'react';
 import { FaGraduationCap } from 'react-icons/fa';
 import { FaPencil } from 'react-icons/fa6';
 import { RiVerifiedBadgeFill } from 'react-icons/ri';
+import { easeInOut, motion } from "motion/react"
 
 const ProfilePage = () => {
     const userData = authClient.useSession();
@@ -34,9 +35,19 @@ const ProfilePage = () => {
     return (
         <div className='max-w-5xl px-4 mx-auto grid grid-cols-1 lg:grid-cols-3  gap-10 my-10'>
 
-            <div className='border border-gray-200 rounded-2xl shadow-2xl lg:col-span-1 space-y-3 p-2'>
+            <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+
+                className='border border-gray-200 rounded-2xl shadow-2xl lg:col-span-1 space-y-3 p-2'>
                 <div>
-                    <div className='flex justify-center items-center '>
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                        
+                        className='flex justify-center items-center '>
                         <Avatar className='h-35 w-35 mt-5 border-4 border-indigo-700 shadow-2xl p-2'>
                             <Avatar.Image
                                 alt={user?.name}
@@ -45,7 +56,7 @@ const ProfilePage = () => {
                             />
                             <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
                         </Avatar>
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className='text-center'>
@@ -70,10 +81,15 @@ const ProfilePage = () => {
                 <div className='p-4'>
                     <button className='btn btn-primary w-full'><FaPencil />Update Information</button>
                 </div>
-            </div>
+            </motion.div>
 
 
-            <div className='col-span-1 lg:col-span-2 p-6 border border-gray-200 shadow space-y-3 rounded-2xl'>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+
+                className='col-span-1 lg:col-span-2 p-6 border border-gray-200 shadow space-y-3 rounded-2xl'>
                 <form onSubmit={handleUpdate}>
                     <div>
                         <h2 className='text-[#0B1C30] text-2xl font-semibold'>Profile Settings</h2>
@@ -127,7 +143,7 @@ const ProfilePage = () => {
                     </div>
 
                 </form>
-            </div>
+            </motion.div>
 
         </div>
     );

@@ -6,7 +6,7 @@ import { Button, Description, FieldError, Form, Input, Label, TextField } from "
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
-
+import { easeInOut, motion } from "motion/react"
 
 const LoginPage = () => {
 
@@ -45,7 +45,12 @@ const LoginPage = () => {
                 <SideContent />
             </div>
 
-            <div className="w-full max-w-md lg:w-1/2  flex flex-col justify-center border border-gray-200 rounded-2xl shadow-2xl p-8 lg:p-5 h-full space-y-4 items-center">
+            <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+
+                className="w-full max-w-md lg:w-1/2  flex flex-col justify-center border border-gray-200 rounded-2xl shadow-2xl p-8 lg:p-5 h-full space-y-4 items-center">
                 <div className="text-center space-y-2 pb-6">
                     <h2 className="text-3xl font-semibold text-[#0B1C30]">Welcome back</h2>
                     <p className="text-sm text-[#464555]">Enter your details to access your dashboard.</p>
@@ -126,7 +131,7 @@ const LoginPage = () => {
                 </div>
 
 
-            </div>
+            </motion.div>
         </div>
     );
 }

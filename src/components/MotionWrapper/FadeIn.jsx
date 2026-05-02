@@ -8,6 +8,7 @@ const FadeIn = ({ children, delay = 0 }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay }}
+            className="h-full"
         >
             {children}
         </motion.div>
