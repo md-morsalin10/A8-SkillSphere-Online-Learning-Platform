@@ -7,7 +7,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 
 const PopularCourses = async () => {
-    const res = await fetch("https://a8-skill-sphere-online-learning-pla.vercel.app/courses.json",
+    const res = await fetch("https://a8-skill-sphere-online-learning-pla.vercel.app/db.json",
         { cache: 'no-store' });
 
     const courseData = await res.json();

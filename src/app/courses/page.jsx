@@ -9,7 +9,7 @@ import Image from 'next/image';
 const CoursePage = async ({ searchParams }) => {
 
     const query = (await searchParams)?.search || "";
-    const res = await fetch("https://a8-skill-sphere-online-learning-pla.vercel.app/courses.json",
+    const res = await fetch("https://a8-skill-sphere-online-learning-pla.vercel.app/db.json",
         { cache: 'no-store' });
     const allCourses = await res.json();
 
