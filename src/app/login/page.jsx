@@ -57,7 +57,7 @@ const LoginPage = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="w-full max-w-md lg:w-1/2 flex flex-col justify-center border border-gray-200 rounded-2xl shadow-2xl p-8 lg:p-5 h-full space-y-4 items-center"
             >
-                <div className="text-center space-y-2 pb-6">
+                <div className="text-center space-y-2 pb-5">
                     <h2 className="text-3xl font-semibold text-[#0B1C30]">Welcome back</h2>
                     <p className="text-sm text-[#464555]">Enter your details to access your dashboard.</p>
                 </div>
