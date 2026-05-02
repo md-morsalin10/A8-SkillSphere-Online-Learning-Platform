@@ -1,9 +1,10 @@
 import CourseCard from '@/components/CourseCard';
 import SearchBar from '@/components/HomePage/SearchBar';
+import FadeIn from '@/components/MotionWrapper/FadeIn';
 import React from 'react';
 
 const CoursePage = async ({ searchParams }) => {
-    
+
     const query = (await searchParams)?.search || "";
     const res = await fetch("https://a8-skill-sphere-online-learning-pla.vercel.app/courses.json",
         { cache: 'no-store' });
@@ -23,8 +24,10 @@ const CoursePage = async ({ searchParams }) => {
             {
                 filteredCourses.length > 0 ? (
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10'>
-                        {filteredCourses.map(data => (
-                            <CourseCard key={data.id} data={data}></CourseCard>
+                        {filteredCourses.map((data,index) => (
+                            <FadeIn key={data.id} delay={index * 0.1}>
+                                <CourseCard data={data} />
+                            </FadeIn>
                         ))}
                     </div>
                 ) : (

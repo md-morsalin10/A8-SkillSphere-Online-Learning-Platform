@@ -3,13 +3,16 @@ import React from 'react';
 import { FiZap } from 'react-icons/fi';
 import { LuAlarmClockCheck, LuBrainCircuit } from 'react-icons/lu';
 import { PiUsersThreeFill } from 'react-icons/pi';
-import MotionWrapper from '../MotionWrapper/MotionWrapper';
+import FadeIn from '../MotionWrapper/FadeIn';
+
 
 const LearningTips = () => {
     return (
         <div className='container mx-auto my-14'>
-            <h2 className='text-center text-4xl font-bold text-[#0B1C30] py-6'>Smart Learning Tips</h2>
-            <MotionWrapper delay={0.6}>
+            <FadeIn delay={0.4}>
+                <h2 className='text-center text-4xl font-bold text-[#0B1C30] py-6'>Smart Learning Tips</h2>
+            </FadeIn>
+            <FadeIn delay={0.5}>
                 <div className='grid grid-cols-1 md:grid-cols-4 p-8 md:p-2  gap-4'>
                     <div className='p-4 shadow-2xl  border-b-4 border-green-500 rounded-2xl space-y-3'>
                         <div className=' flex justify-center items-center'>
@@ -58,8 +61,8 @@ const LearningTips = () => {
 
 
                 </div>
-            </MotionWrapper>
-        </div>
+            </FadeIn>
+        </div >
     );
 };
 

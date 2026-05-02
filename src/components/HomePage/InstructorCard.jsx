@@ -16,7 +16,7 @@ const InstructorCard = ({ins}) => {
         className='p-9 border border-gray-200 shadow-xl rounded-2xl'>
             <motion.div 
             whileHover={{rotate: 360}}
-             transition={{duration: 0.3, ease: easeInOut}}
+            transition={{duration: 0.3, ease: easeInOut}}
             className='flex w-full rounded-full p-5 border-3 border-green-500 relative aspect-square justify-center items-center '>
                 <Image 
                 src={image}

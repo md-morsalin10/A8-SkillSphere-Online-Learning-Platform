@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-const MotionWrapper = ({ children, delay = 0 }) => {
+const FadeIn = ({ children, delay = 0 }) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -14,4 +14,4 @@ const MotionWrapper = ({ children, delay = 0 }) => {
     );
 };
 
-export default MotionWrapper;
+export default FadeIn;
