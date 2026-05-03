@@ -100,6 +100,7 @@ const ProfilePage = () => {
                         <fieldset className="fieldset w-full">
                             <legend className="fieldset-legend text-xs font-semibold text-[#464555]">Name</legend>
                             <input
+                                required
                                 type="text"
                                 name='name'
                                 className="input bg-base-200 w-full"
@@ -109,6 +110,7 @@ const ProfilePage = () => {
                         <fieldset className="fieldset w-full">
                             <legend className="fieldset-legend font-semibold text-[#464555]">Image URL</legend>
                             <input
+                                required
                                 name='url'
                                 type="text"
                                 className="input  bg-base-200 w-full"
