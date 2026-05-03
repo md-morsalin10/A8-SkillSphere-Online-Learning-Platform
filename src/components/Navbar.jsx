@@ -57,8 +57,8 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {!user &&
-                        <ul>
-                            <Link href={'/login'}><button className='btn mx-2 btn-primary btn-outline'>Login</button></Link>
+                        <ul className='flex gap-1 lg:gap-2'>
+                            <Link href={'/login'}><button className='btn btn-primary btn-outline'>Login</button></Link>
                             <Link href={'/register'}><button className='btn btn-primary'>Register</button></Link>
                         </ul>}
 
