@@ -13,7 +13,7 @@ const PopularCourses = async () => {
     const courseData = await res.json();
 
     const popularCourse = courseData.sort((a, b) => b.rating - a.rating).slice(0, 3);
-    console.log(popularCourse);
+    // console.log(popularCourse);
 
 
     return (

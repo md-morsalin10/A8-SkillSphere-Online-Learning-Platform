@@ -22,10 +22,10 @@ const RegisterPage = () => {
             email,
             password,
             url,
-            callbackURL: "/"
+            callbackURL: "/login"
         }, {
             onSuccess: (ctx) => {
-               router.back();
+               router.back('/login');
                 toast.success("Register Successful");
             },
             onError: (ctx) => {
