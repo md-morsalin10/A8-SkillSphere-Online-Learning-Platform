@@ -24,7 +24,7 @@ const Footer = () => {
                             <FaPhoneAlt className='text-indigo-600' /> +880 1234-567890
                         </li>
                         <li className='flex items-center gap-3'>
-                            <FaMapMarkerAlt className='text-indigo-600' /> Dinajpur, Bangladesh
+                            <FaMapMarkerAlt className='text-indigo-600' /> Nilphamari, Bangladesh
                         </li>
                     </ul>
                 </div>

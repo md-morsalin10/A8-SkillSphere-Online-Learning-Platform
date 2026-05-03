@@ -25,6 +25,7 @@ const RegisterPage = () => {
             callbackURL: "/login"
         },{  
             onSuccess: (ctx) => {
+            
                router.push('/login');
                 toast.success("Register Successful");
             },
