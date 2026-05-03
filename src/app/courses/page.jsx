@@ -7,10 +7,14 @@ import Image from 'next/image';
 
 
 const CoursePage = async ({ searchParams }) => {
+    console.log(searchParams, "search params from all courses");
+    
 
     const query = (await searchParams)?.search || "";
+
     const res = await fetch("https://a8-skill-sphere-online-learning-pla.vercel.app/db.json",
         { cache: 'no-store' });
+
     const allCourses = await res.json();
 
     const filteredCourses = allCourses.filter(course =>

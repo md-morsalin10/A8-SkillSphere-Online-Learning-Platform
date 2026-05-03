@@ -21,11 +21,11 @@ const Navbar = () => {
         <li
             className={`${pathName === '/courses' ?
                 "font-bold text-indigo-700 border-b-4 border-indigo-700" : ''}mx-2`}
-        ><Link href={'/courses'}>Courses</Link></li>
+        ><Link href={'/courses'}>All Courses</Link></li>
         <li
             className={`${pathName === '/profile' ?
                 "font-bold text-indigo-700 border-b-4 border-indigo-700" : ''}`}
-        ><Link href={'/profile'}>Profile</Link></li>
+        ><Link href={'/profile'}>My Profile</Link></li>
     </>
 
     const handleSignOut=async()=>{

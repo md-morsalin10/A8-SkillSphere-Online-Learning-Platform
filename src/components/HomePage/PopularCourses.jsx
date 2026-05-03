@@ -18,10 +18,10 @@ const PopularCourses = async () => {
 
     return (
         <div className='container mx-auto p-5'>
-            <div className='flex justify-between space-y-6'>
+            <div className='flex  text-center lg:text-start flex-col lg:flex-row justify-between space-y-4'>
                 <div >
                     <FadeIn delay={0.3}>
-                        <h2 className='text-[#0B1C30] text-xl lg:text-3xl font-bold'>Popular Courses</h2>
+                        <h2 className='text-[#0B1C30] text-2xl lg:text-3xl font-bold'>Popular Courses</h2>
                     </FadeIn>
                     <FadeIn delay={0.3}>
                         <p className='text-[#464555] text-xs lg:text-sm'>Our most enrolled programs this month</p>
@@ -29,7 +29,7 @@ const PopularCourses = async () => {
                 </div>
                 <FadeIn delay={0.3}>
                     <Link href={'/courses'}>
-                        <button className='text-[#3525CD] text-sm cursor-pointer btn btn-outline'>View All Courses <FaArrowRight /></button>
+                        <button className='text-[#3525CD] text-sm  btn btn-outline'>View All Courses <FaArrowRight /></button>
                     </Link>
                 </FadeIn>
             </div>
