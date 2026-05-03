@@ -2,12 +2,13 @@
 import { authClient } from '@/lib/auth-client';
 import { Avatar } from '@heroui/react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import React from 'react';
 import { MdOutlineLogout } from 'react-icons/md';
 
 const Navbar = () => {
     const userData = authClient.useSession();
+    const router = useRouter()
     const user = userData.data?.user
     // console.log(user, "user data  ");
 
@@ -29,6 +30,7 @@ const Navbar = () => {
 
     const handleSignOut=async()=>{
         await authClient.signOut()
+         router.push('/');
     }
     
     return (
