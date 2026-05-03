@@ -10,7 +10,8 @@ const Navbar = () => {
     const userData = authClient.useSession();
     const router = useRouter()
     const user = userData.data?.user
-    // console.log(user, "user data  ");
+
+    // console.log(user, "user data");
 
     const pathName = usePathname();
 
@@ -57,7 +58,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {!user &&
-                        <ul className='flex gap-1 lg:gap-2'>
+                        <ul className='flex gap-2 lg:gap-3'>
                             <Link href={'/login'}><button className='btn btn-primary btn-outline'>Login</button></Link>
                             <Link href={'/register'}><button className='btn btn-primary'>Register</button></Link>
                         </ul>}
