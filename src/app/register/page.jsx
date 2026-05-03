@@ -21,7 +21,7 @@ const RegisterPage = () => {
             name,
             email,
             password,
-            url,
+            image: url,
             callbackURL: "/login"
         },{  
             onSuccess: (ctx) => {

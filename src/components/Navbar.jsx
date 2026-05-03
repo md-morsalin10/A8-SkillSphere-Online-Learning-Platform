@@ -56,8 +56,8 @@ const Navbar = () => {
                 <div className="navbar-end">
                     {!user &&
                         <ul>
-                            <Link href={'/login'}><button className='btn mx-2 btn-primary'>Login</button></Link>
-                            <Link href={'/register'}><button className='btn btn-primary btn-outline'>Register</button></Link>
+                            <Link href={'/login'}><button className='btn mx-2 btn-primary btn-outline'>Login</button></Link>
+                            <Link href={'/register'}><button className='btn btn-primary'>Register</button></Link>
                         </ul>}
 
                     {
