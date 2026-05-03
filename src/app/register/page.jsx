@@ -23,9 +23,9 @@ const RegisterPage = () => {
             password,
             url,
             callbackURL: "/login"
-        }, {
+        },{  
             onSuccess: (ctx) => {
-               router.back('/login');
+               router.push('/login');
                 toast.success("Register Successful");
             },
             onError: (ctx) => {
