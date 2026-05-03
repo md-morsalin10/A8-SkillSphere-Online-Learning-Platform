@@ -46,7 +46,7 @@ const RegisterPage = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 
-                className="flex  flex-col justify-center  items-center py-6  border border-gray-200 rounded-2xl shadow-2xl  ">
+                className="flex  flex-col justify-center  items-center py-5  border border-gray-200 rounded-2xl shadow-2xl  ">
                 <div className="text-center space-y-2 pb-6">
                     <h2 className="text-3xl font-semibold text-[#0B1C30]">Create an Account</h2>
                     <p className="text-sm text-[#464555]">Sign up now to explore all our features.</p>
